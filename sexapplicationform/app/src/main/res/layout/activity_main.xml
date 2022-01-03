@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFEAFD"
     tools:context=".MainActivity">
-    
+
 
     <TextView
         android:id="@+id/textView4"
@@ -172,9 +172,8 @@
         android:textColor="#252525"
         android:textSize="36sp"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
@@ -188,5 +187,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kyobohandwriting2019"
+        android:text="책임지지못할 행동은 하지 않아요!"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sharebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
