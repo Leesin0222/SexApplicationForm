@@ -7,28 +7,19 @@
     android:background="#FDD5F9"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="80dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/hartcon2"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aacchildskygood"
-        android:text="섹스신청서"
+        android:text="😍섹스신청서😍"
         android:textColor="@color/black"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -89,7 +80,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.58" />
     <EditText
         android:id="@+id/nameedit"
         android:layout_width="0dp"
@@ -152,6 +143,7 @@
         android:fontFamily="@font/kyobohandwriting2019"
         android:gravity="center"
         android:hint="몇날몇시"
+        android:maxLength="11"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
@@ -185,6 +177,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
+        android:id="@+id/sharebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="공유하기"
