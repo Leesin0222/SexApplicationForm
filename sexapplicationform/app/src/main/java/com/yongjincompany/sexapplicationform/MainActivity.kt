@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // 클릭 리스너 구현
         binding.sharebutton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
+                binding.sharebutton.visibility = View.INVISIBLE
                 ScreenShot()
             }
         })
@@ -38,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         //캐시 -> 비트맵 변환
         val screenBitmap: Bitmap = Bitmap.createBitmap(view.getDrawingCache())
         try {
-            binding.sharebutton.visibility = View.INVISIBLE
             val cachePath = File(applicationContext.cacheDir, "images")
                 cachePath.mkdirs() // don't forget to make the directory
             val stream =
