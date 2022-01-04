@@ -26,8 +26,10 @@ class MainActivity : AppCompatActivity() {
         binding.sharebutton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 binding.sharebutton.visibility = View.INVISIBLE
+                binding.explainbtn.visibility = View.INVISIBLE
                 ScreenShot()
                 binding.sharebutton.visibility = View.VISIBLE
+                binding.explainbtn.visibility = View.VISIBLE
             }
         })
     }
