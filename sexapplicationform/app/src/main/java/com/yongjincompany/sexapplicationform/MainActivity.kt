@@ -1,5 +1,6 @@
 package com.yongjincompany.sexapplicationform
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -9,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import androidx.core.content.FileProvider
 import com.yongjincompany.sexapplicationform.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.dialog_view.view.*
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -32,6 +34,22 @@ class MainActivity : AppCompatActivity() {
                 binding.explainbtn.visibility = View.VISIBLE
             }
         })
+
+        binding.explainbtn.setOnClickListener {
+            val view = View.inflate(this, R.layout.dialog_view, null)
+
+            val builder = AlertDialog.Builder(this)
+            builder.setView(view)
+
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.setCancelable(false)
+
+            view.gomain.setOnClickListener {
+                dialog.dismiss()
+            }
+        }
     }
 
     //화면 캡쳐하기
