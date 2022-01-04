@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/cen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/white_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="설명서"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/kyobohandwriting2019"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.모르는 사람에게 사용하지 마세요!\n커플끼리 즐거운 이벤트용도로 사용해주세요\n2.앱을 악용하지 마세요!(성희롱 등)\n3.서로 합의하에 관계를 진행하세요"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/kyobohandwriting2019"/>
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_info_24"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cen"
+        app:layout_constraintTop_toTopOf="@+id/cen"
+        app:layout_constraintStart_toStartOf="@+id/cen"
+        app:layout_constraintEnd_toEndOf="@+id/cen"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gomain"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="닫기"
+        android:background="@drawable/white_background"
+        android:textColor="@color/black"
+        android:fontFamily="@font/kyobohandwriting2019"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/cen"
+        app:layout_constraintEnd_toEndOf="@+id/cen"
+        app:layout_constraintTop_toBottomOf="@+id/cen"
+        app:layout_constraintBottom_toBottomOf="@+id/cen"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
