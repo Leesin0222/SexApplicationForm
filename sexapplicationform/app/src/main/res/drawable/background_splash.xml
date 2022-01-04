@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-</selector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="#E286FC"/>
+    <item>
+        <bitmap android:src="@drawable/title"
+            android:gravity="center" />
+    </item>
+</layer-list>
