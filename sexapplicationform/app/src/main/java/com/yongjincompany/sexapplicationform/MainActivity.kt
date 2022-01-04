@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.core.content.FileProvider
 import com.yongjincompany.sexapplicationform.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.dialog_view.view.*
@@ -49,6 +50,15 @@ class MainActivity : AppCompatActivity() {
             view.gomain.setOnClickListener {
                 dialog.dismiss()
             }
+        }
+    }
+    var Time = 0L
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - Time >=1500 ) {
+            Time = System.currentTimeMillis()
+            Toast.makeText(this,"뒤로가기 버튼을 한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show()
+        } else {
+            finish()
         }
     }
 
